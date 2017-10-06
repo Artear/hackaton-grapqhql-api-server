@@ -15,6 +15,6 @@ app.use('/graphql', cors(), graphqlHTTP({
     graphiql: true
 }));
 
-app.listen(4000, function() {
+app.listen(80, function() {
     console.log("Server up!...")
 });
