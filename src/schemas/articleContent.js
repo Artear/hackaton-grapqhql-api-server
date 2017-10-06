@@ -4,6 +4,7 @@ const DroplineType = require('./dropline');
 const BodyType = require('./body');
 const blockMediaType = require('./media');
 const authorMediaType = require('./author');
+const tagType = require('./tag');
 
 export default new graphql.GraphQLObjectType({
     name: 'articleContent',
@@ -40,6 +41,9 @@ export default new graphql.GraphQLObjectType({
         },
         author: {
             type: authorMediaType
+        },
+        tagList: {
+            type: graphql.GraphQLList(tagType)
         }
     })
 });
