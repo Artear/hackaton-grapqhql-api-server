@@ -5,7 +5,7 @@ const BlockListType = new graphql.GraphQLObjectType({
     name: 'blocks',
     fields: () => ({
     block_list: {
-        type: graphql.GraphQLString,
+        type: new graphql.GraphQLList(BlockType),
         args: {
             type: {
                 type: graphql.GraphQLString
@@ -19,11 +19,7 @@ const RootQuery = new graphql.GraphQLObjectType({
     name: "RootQueryType",
     fields: {
         cover: {
-            resolve: () => {
-                return new Promise(() => {
-
-                })
-            }
+            type: BlockListType,
         }
     }
 });
