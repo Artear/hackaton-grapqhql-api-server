@@ -1,24 +1,49 @@
 const {
     GraphQLString,
-    GraphQLObjectType
+    GraphQLObjectType,
+    GraphQLList
 } = require('graphql');
-const TitleType = require('./title');
-const DroplineType = require('./dropline');
-const MediaContent = require('./mediaContent');
 
-const mediaType = new GraphQLObjectType({
-    name: 'Media',
+const MediaContentType = new GraphQLObjectType({
+    name: 'MediaContent',
     fields: () => ({
-        title: {
-            type: TitleType,
+        metadata: {
+            type: Metadata,
         },
-        dropline: {
-            type: DroplineType,
+        mediaId: {
+            type: GraphQLString,
         },
-        media: {
-            type: MediaContent,
+        source: {
+            type: Source,
         }
     })
 });
 
-module.exports = mediaType;
+const Metadata = new GraphQLObjectType({
+    name: 'Metadata',
+    fields: () => ({
+        tagList: {
+            type: GraphQLList(GraphQLString),
+        },
+        createdISO: {
+            type: GraphQLString,
+        },
+    })
+});
+
+const Source = new GraphQLObjectType({
+    name: 'Source',
+    fields: () => ({
+        type: {
+            type: GraphQLString,
+        },
+        value: {
+            type: GraphQLString,
+        },
+        origin: {
+            type: GraphQLString,
+        }
+    })
+});
+
+module.exports = MediaContentType;
