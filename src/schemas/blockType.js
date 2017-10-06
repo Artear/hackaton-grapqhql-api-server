@@ -23,7 +23,7 @@ const BlockType = new graphql.GraphQLObjectType({
             type: new graphql.GraphQLString()
         },
         content: {
-            type: new graphql.GraphQLObjectType(BlockContentType)
+            type: BlockContentType
         }
     })
 });
