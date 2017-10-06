@@ -23,7 +23,7 @@ const CoverType = new GraphQLObjectType({
             type: TitleType
         },
         containerList: {
-            type: GraphQLList(ContainerType)
+            type: new GraphQLList(ContainerType)
         }
     }
 });

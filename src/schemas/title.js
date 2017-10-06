@@ -5,7 +5,7 @@ const {
 
 const TitleType = new GraphQLObjectType({
     name: "Title",
-    field: {
+    fields: {
         main: {
             type: GraphQLString
         },

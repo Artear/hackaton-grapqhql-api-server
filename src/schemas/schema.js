@@ -9,7 +9,7 @@ const {
     GraphQLList
 } = require('graphql');
 const CoverType = require('./cover');
-const covers = require("../mocks/coverList");
+const covers = require("../../mocks/coverList");
 
 const getCoverBySectionName = (section) => {
     const cover = covers.filter((cover) => {
@@ -17,7 +17,6 @@ const getCoverBySectionName = (section) => {
     });
     resolve(cover);
 } 
-
 
 const RootQuery = new GraphQLObjectType({
     name: "RootQueryType",
@@ -34,7 +33,7 @@ const RootQuery = new GraphQLObjectType({
     }
 });
 
-const schema = new graphql.GraphQLSchema({
+const schema = new GraphQLSchema({
     query: RootQuery
 });
 
