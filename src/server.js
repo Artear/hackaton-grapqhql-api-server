@@ -1,4 +1,4 @@
 /**
- *  GRAPHQL SERVER
+ * GRAPHQL SERVER
  *
  * */
