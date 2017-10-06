@@ -1,0 +1,34 @@
+{
+  "section": "TodoNoticias",
+  "title": {
+    "main": "main title",
+    "social": "social title",
+    "headline": "headline title"
+  },
+  "containerList": [
+    {
+      "title": ":Title",
+      "type": "brick",
+      "context": {
+        "type": "main"
+      },
+      "data": {
+      }
+    },
+    {
+      "title": ":Title",
+      "type": "container",
+      "context": {
+        "type": "main"
+      },
+      "data": ":Container"
+    },
+    {
+      "type": "block",
+      "context": {},
+      "data": {}
+    },
+    {
+    }
+  ]
+}
