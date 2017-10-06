@@ -1,5 +1,5 @@
 const graphql = require('graphql');
-
+const TitleType = require('./title');
 
 export default new graphql.GraphQLObjectType({
     name: 'articleContent',
@@ -9,6 +9,9 @@ export default new graphql.GraphQLObjectType({
         },
         type: {
             type: graphql.GraphQLString
+        },
+        title: {
+            type: graphql.GraphQLList(TitleType)
         }
     })
 });
