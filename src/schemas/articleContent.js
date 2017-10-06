@@ -5,6 +5,8 @@ const BodyType = require('./body');
 const blockMediaType = require('./media');
 const authorMediaType = require('./author');
 const tagType = require('./tag');
+const peopleType = require('./people');
+const sectionType = require('./section');
 
 export default new graphql.GraphQLObjectType({
     name: 'articleContent',
@@ -44,6 +46,15 @@ export default new graphql.GraphQLObjectType({
         },
         tagList: {
             type: graphql.GraphQLList(tagType)
+        },
+        peopleList: {
+            type: graphql.GraphQLList(peopleType)
+        },
+        cover: {
+            type: tagType
+        },
+        section: {
+            type: sectionType
         }
     })
 });
