@@ -7,7 +7,7 @@ const BlockItem = new graphql.GraphQLInterfaceType({
         id: {
             type: new graphql.GraphQLString()
         },
-        title: {
+        type: {
             type: new graphql.GraphQLObjectType(TitleType)
         },
         content: {
