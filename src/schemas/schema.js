@@ -11,15 +11,6 @@ const {
 const CoverType = require('./cover');
 const covers = require("../../mocks/coverList");
 
-const getCoverBySectionName = (section) => {
-    return new Promise((resolve) => {
-            const cover = covers.filter((cover) => {
-            return cover.section === section
-        });
-        resolve(cover);
-    });
-} 
-
 const RootQuery = new GraphQLObjectType({
     name: "RootQueryType",
     fields: {
@@ -30,7 +21,14 @@ const RootQuery = new GraphQLObjectType({
                     type: GraphQLString
                 }
             },
-            resolve: (_, args) => getCoverBySectionName(args.id)
+            resolve: (_, args) => {
+                return new Promise((resolve) => {
+                    const [cover] = covers.filter((cover) => {
+                        return cover.section === args.section
+                    });
+                    resolve(cover);
+                });
+            }
         }
     }
 });
