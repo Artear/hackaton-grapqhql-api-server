@@ -4,8 +4,8 @@ const {
 } = require('graphql');
 
 const BodyType = new GraphQLObjectType({
-    name: "Dropline",
-    field: {
+    name: "Body",
+    fields: {
         type: {
             type: GraphQLString
         },

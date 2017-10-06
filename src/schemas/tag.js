@@ -5,7 +5,7 @@ const {
 
 const TagType = new GraphQLObjectType({
     name: "Tag",
-    field: {
+    fields: {
         name: {
             type: GraphQLString
         },

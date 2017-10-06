@@ -2,13 +2,13 @@ const graphql = require('graphql');
 const TitleType = require('./title');
 const DroplineType = require('./dropline');
 const BodyType = require('./body');
-const blockMediaType = require('./media');
+const MediaContent = require('./mediaContent');
 const authorMediaType = require('./author');
 const tagType = require('./tag');
 const peopleType = require('./people');
 const sectionType = require('./section');
 
-export default new graphql.GraphQLObjectType({
+const articleContentType = new graphql.GraphQLObjectType({
     name: 'articleContent',
     fields: () => ({
         id: {
@@ -21,16 +21,16 @@ export default new graphql.GraphQLObjectType({
             type: graphql.GraphQLString
         },
         title: {
-            type: graphql.GraphQLList(TitleType)
+            type: TitleType
         },
         dropline: {
             type: DroplineType
         },
         body: {
-            type: graphql.GraphQLList(BodyType)
+            type: new graphql.GraphQLList(BodyType)
         },
         media: {
-            type: graphql.GraphQLList(blockMediaType)
+            type: new graphql.GraphQLList(MediaContent)
         },
         changedISO: {
             type: graphql.GraphQLString
@@ -45,10 +45,10 @@ export default new graphql.GraphQLObjectType({
             type: authorMediaType
         },
         tagList: {
-            type: graphql.GraphQLList(tagType)
+            type:new  graphql.GraphQLList(tagType)
         },
         peopleList: {
-            type: graphql.GraphQLList(peopleType)
+            type: new graphql.GraphQLList(peopleType)
         },
         cover: {
             type: tagType
@@ -58,3 +58,5 @@ export default new graphql.GraphQLObjectType({
         }
     })
 });
+
+module.exports = articleContentType;

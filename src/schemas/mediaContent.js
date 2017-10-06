@@ -23,7 +23,7 @@ const Metadata = new GraphQLObjectType({
     name: 'Metadata',
     fields: () => ({
         tagList: {
-            type: GraphQLList(GraphQLString),
+            type: new GraphQLList(GraphQLString),
         },
         createdISO: {
             type: GraphQLString,

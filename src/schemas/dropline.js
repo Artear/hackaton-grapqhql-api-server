@@ -5,14 +5,14 @@ const {
 
 const DroplineType = new GraphQLObjectType({
     name: "Dropline",
-    field: {
+    fields: () => ({
         type: {
             type: GraphQLString
         },
         content: {
             type: GraphQLString
         }
-    }
+    })
 });
 
 module.exports = DroplineType;

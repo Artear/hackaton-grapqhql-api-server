@@ -1,4 +1,3 @@
-
 const {
     GraphQLSchema,
     GraphQLObjectType,
@@ -8,8 +7,11 @@ const {
     GraphQLBoolean,
     GraphQLList
 } = require('graphql');
+
 const CoverType = require('./cover');
+const ArticleType = require('./article');
 const covers = require("../../mocks/coverList");
+const articles = require("../../mocks/articleList");
 
 const RootQuery = new GraphQLObjectType({
     name: "RootQueryType",
@@ -27,6 +29,28 @@ const RootQuery = new GraphQLObjectType({
                         return cover.section === args.section
                     });
                     resolve(cover);
+                });
+            }
+        },
+
+        articles: {
+            type: new GraphQLList(ArticleType),
+            args: {
+                ids: {
+                    type: new GraphQLList(GraphQLString)
+                }
+            },
+            resolve: (_, {ids}) => {
+                return new Promise((resolve) => {
+
+                    if(!ids)
+                        resolve(articles);
+
+                    const articlesFiltered = articles.filter((article) => {
+                        return ids.includes(article.id)
+                    });
+
+                    resolve(articlesFiltered);
                 });
             }
         }

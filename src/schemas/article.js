@@ -1,19 +1,19 @@
-import articleContentType from "./articleContent";
-
+const articleContentType = require("./articleContent");
 const graphql = require('graphql');
 
-
-export default new graphql.GraphQLObjectType({
+const articleType = new graphql.GraphQLObjectType({
     name: 'article',
     fields: () => ({
         id: {
-            type: graphql.GraphQLID,
+            type: graphql.GraphQLID
         },
         type: {
             type: graphql.GraphQLString
         },
         content: {
-            type: graphql.GraphQLList(articleContentType)
+            type: articleContentType
         }
     })
 });
+
+module.exports = articleType;

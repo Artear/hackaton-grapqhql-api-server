@@ -5,7 +5,7 @@ const {
 
 const AuthorType = new GraphQLObjectType({
     name: "Author",
-    field: {
+    fields: {
         name: {
             type: GraphQLString
         },

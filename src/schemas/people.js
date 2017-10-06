@@ -5,7 +5,7 @@ const {
 
 const PeopleType = new GraphQLObjectType({
     name: "People",
-    field: {
+    fields: {
         name: {
             type: GraphQLString
         },
