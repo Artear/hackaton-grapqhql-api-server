@@ -19,7 +19,11 @@ const RootQuery = new graphql.GraphQLObjectType({
     name: "RootQueryType",
     fields: {
         cover: {
-            type: BlockListType
+            resolve: () => {
+                return new Promise(() => {
+
+                })
+            }
         }
     }
 });
