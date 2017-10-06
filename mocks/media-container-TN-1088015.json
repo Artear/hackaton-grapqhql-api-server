@@ -1,0 +1,25 @@
+{
+  "title": {
+    "main": "mock the title",
+    "social": "mock social title",
+    "headline": "mock headline title"
+  },
+  "dropline": [
+    {
+      "type": "draft",
+      "content": "{\"entityMap\":{},\"blocks\":[{\"key\":\"dtsin\",\"text\":\"N\\u00e9stor Pav\\u00f3n y Sebasti\\u00e1n Wagner est\\u00e1n se\\u00f1alados por el abuso sexual con acceso carnal y femicidio. Gabriel Otero ser\\u00eda absuelto.\",\"type\":\"unstyled\",\"depth\":0,\"inlineStyleRanges\":[],\"entityRanges\":[],\"data\":{}}]}"
+    }
+  ],
+  "metadata": {
+    "tagList": [
+      "trenspb1jpg"
+    ],
+    "createdISO": "20171005T181254-0300"
+  },
+  "mediaId": "TN-image-1088015",
+  "source": {
+    "type": "image",
+    "value": "//cdn.tn.com.ar/sites/default/files/2017/10/05/tren_spb_1.jpg",
+    "origin": "TN"
+  }
+}
