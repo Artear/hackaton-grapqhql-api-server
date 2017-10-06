@@ -1,1 +1,67 @@
 # Hackaton - GraphQL API Server
+
+## Server
+
+```
+https://cover-graphql-server.herokuapp.com/graphql
+```
+
+### Get Articles without filter
+
+```
+{
+  articles {
+    articleId
+    title {
+      main
+      social
+      headline
+    }
+    uri
+  } 
+}
+```
+
+### Get Articles with filter
+
+```
+{
+  articles(ids:["=11111", "=222222"]) {
+    articleId
+    title {
+      main
+      social
+      headline
+    }
+    uri
+  } 
+}
+```
+
+
+### Get Medias
+
+```
+{
+  medias(ids:["TN-image-1088015", "TN-image-1088016"]) {
+    mediaId
+    source {
+      type
+      value
+      origin
+    }
+    metadata {
+      createdISO
+    }
+  }
+}
+```
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key][emojis]):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+| [<img src="https://avatars1.githubusercontent.com/u/19291876?v=3&s=100" width="100px;"/><br /><sub>Alejo Daraio</sub>](https://github.com/alejodaraio) | [<img src="https://avatars2.githubusercontent.com/u/1482009?v=4&s=100" width="100px;"/><br /><sub>Jose Sagreso</sub>](https://github.com/jsagredo-scott) | [<img src="https://avatars0.githubusercontent.com/u/1864435?v=4&s=100" width="100px;"/><br /><sub>Leandro Almeida</sub>](https://github.com/leanazulyoro) | [<img src="https://avatars3.githubusercontent.com/u/1032786?v=4&s=100" width="100px;"/><br /><sub>Alejandro Cena</sub>](https://github.com/alejandrocena) |
+| :---: | :---: | :---: | :---: |
+<!-- ALL-CONTRIBUTORS-LIST:END -->
