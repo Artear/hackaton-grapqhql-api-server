@@ -1,3 +1,5 @@
+import articleContent from "./articleContent";
+
 const graphql = require('graphql');
 
 
@@ -11,10 +13,7 @@ export default new graphql.GraphQLObjectType({
             type: graphql.GraphQLString
         },
         content: {
-
+            type: graphql.GraphQLList(articleContent)
         }
     })
 });
-
-
-module.exports = schema;
