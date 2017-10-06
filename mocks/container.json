@@ -1,5 +1,11 @@
 {
-  "title": ":Title",
+  "title": {
+    "title": {
+      "main": "mock the title",
+      "social": "mock social title",
+      "headline": "mock headline title"
+    }
+  },
   "type": "brick",
   "context": {
     "type": "main"

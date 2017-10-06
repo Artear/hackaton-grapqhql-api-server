@@ -7,7 +7,13 @@
   },
   "containerList": [
     {
-      "title": ":Title",
+      "title": {
+        "title": {
+          "main": "mock the title",
+          "social": "mock social title",
+          "headline": "mock headline title"
+        }
+      },
       "type": "brick",
       "context": {
         "type": "main"
@@ -307,13 +313,25 @@
       ]
     },
     {
-      "title": ":Title",
+      "title": {
+        "title": {
+          "main": "mock the title",
+          "social": "mock social title",
+          "headline": "mock headline title"
+        }
+      },
       "type": "container",
       "context": {
         "type": "main"
       },
       "data": {
-        "title": ":Title",
+        "title": {
+          "title": {
+            "main": "mock the title",
+            "social": "mock social title",
+            "headline": "mock headline title"
+          }
+        },
         "type": "brick",
         "context": {
           "type": "main"
