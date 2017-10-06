@@ -2,6 +2,7 @@ const {
     GraphQLString,
     GraphQLObjectType
 } = require('graphql');
+const MediaType = require('./media');
 
 const blockMediaType = new GraphQLObjectType({
     name: 'BlockMedia',
