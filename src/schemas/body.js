@@ -3,7 +3,7 @@ const {
     GraphQLObjectType
 } = require('graphql');
 
-const DroplineType = new GraphQLObjectType({
+const BodyType = new GraphQLObjectType({
     name: "Dropline",
     field: {
         type: {
@@ -15,4 +15,4 @@ const DroplineType = new GraphQLObjectType({
     }
 });
 
-module.exports = DroplineType;
+module.exports = BodyType;

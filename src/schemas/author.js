@@ -3,16 +3,16 @@ const {
     GraphQLObjectType
 } = require('graphql');
 
-const DroplineType = new GraphQLObjectType({
-    name: "Dropline",
+const AuthorType = new GraphQLObjectType({
+    name: "Author",
     field: {
-        type: {
+        name: {
             type: GraphQLString
         },
-        content: {
+        picture: {
             type: GraphQLString
         }
     }
 });
 
-module.exports = DroplineType;
+module.exports = AuthorType;
