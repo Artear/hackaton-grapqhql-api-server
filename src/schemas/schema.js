@@ -12,10 +12,12 @@ const CoverType = require('./cover');
 const covers = require("../../mocks/coverList");
 
 const getCoverBySectionName = (section) => {
-    const cover = covers.filter((cover) => {
-        return cover.section === section
+    return new Promise((resolve) => {
+            const cover = covers.filter((cover) => {
+            return cover.section === section
+        });
+        resolve(cover);
     });
-    resolve(cover);
 } 
 
 const RootQuery = new GraphQLObjectType({
@@ -28,7 +30,7 @@ const RootQuery = new GraphQLObjectType({
                     type: GraphQLString
                 }
             },
-            resolve: (_, args) => getCoverById(args.id)
+            resolve: (_, args) => getCoverBySectionName(args.id)
         }
     }
 });
