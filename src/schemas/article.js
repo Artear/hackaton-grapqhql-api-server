@@ -1,4 +1,4 @@
-import articleContent from "./articleContent";
+import articleContentType from "./articleContent";
 
 const graphql = require('graphql');
 
@@ -13,7 +13,7 @@ export default new graphql.GraphQLObjectType({
             type: graphql.GraphQLString
         },
         content: {
-            type: graphql.GraphQLList(articleContent)
+            type: graphql.GraphQLList(articleContentType)
         }
     })
 });
