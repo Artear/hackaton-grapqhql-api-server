@@ -1,0 +1,10 @@
+{
+    "id": "=ykdhfkjshdf",
+    "type": "block-n",
+    "content": {
+        "items": [
+            ":Article",
+            ":Media"
+        ]
+    }
+}
