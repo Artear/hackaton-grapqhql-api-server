@@ -17,7 +17,7 @@ const CoverType = new GraphQLObjectType({
     name: 'Cover',
     fields: {
         section: {
-            type: GraphQLString
+            type: GraphQLString,
         },
         title: {
             type: TitleType
@@ -27,3 +27,5 @@ const CoverType = new GraphQLObjectType({
         }
     }
 });
+
+module.exports = CoverType;
