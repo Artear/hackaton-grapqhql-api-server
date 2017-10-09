@@ -59,7 +59,7 @@ https://cover-graphql-server.herokuapp.com/graphql
 
 ## Contributors
 
-Thanks goes to these wonderful people ([emoji key][emojis]):
+Thanks goes to these wonderful people:
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 | [<img src="https://avatars1.githubusercontent.com/u/19291876?v=3&s=100" width="100px;"/><br /><sub>Alejo Daraio</sub>](https://github.com/alejodaraio) | [<img src="https://avatars2.githubusercontent.com/u/1482009?v=4&s=100" width="100px;"/><br /><sub>Jose Sagreso</sub>](https://github.com/jsagredo-scott) | [<img src="https://avatars0.githubusercontent.com/u/1864435?v=4&s=100" width="100px;"/><br /><sub>Leandro Almeida</sub>](https://github.com/leanazulyoro) | [<img src="https://avatars3.githubusercontent.com/u/1032786?v=4&s=100" width="100px;"/><br /><sub>Alejandro Cena</sub>](https://github.com/alejandrocena) | [<img src="https://avatars0.githubusercontent.com/u/21956382?v=4&s=100" width="100px;"/><br /><sub>Brian Novillo</sub>](https://github.com/briannovillo) | [<img src="https://avatars1.githubusercontent.com/u/5498252?v=4&s=100" width="100px;"/><br /><sub>Gabrial Fusca</sub>](https://github.com/gfusca) | [<img src="https://avatars2.githubusercontent.com/u/2520795?v=4&s=100" width="100px;"/><br /><sub>David Tolchinsky</sub>](https://github.com/daver1419) |
